@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "jost";
+  src: url(../../asset/font/Jost-Regular.ttf);
+}
+
+@font-face {
+  font-family: "jost-medium";
+  src: url(../../asset/font/Jost-Medium.ttf);
+}
+
+@mixin h1 {
+  font-family: "jost-medium";
+  font-size: 48px;
+  line-height: 48px;
+}
+
+@mixin h2 {
+  font-family: "jost-medium";
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 2;
+}
+
+@mixin h3 {
+  font-family: "jost-medium";
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 5;
+}
+
+@mixin body {
+  font-family: "jost";
+  font-size: 16px;
+  line-height: 26px;
+}

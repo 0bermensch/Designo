@@ -22,7 +22,28 @@ const [designimages] = useState([
 ]);
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <div className="home">
+      <HomeCard />
+      <div className="home__design--mobile">
+        <DesignCard title="WEB DESIGN" image={Mweb} />
+        <DesignCard title="APP DESIGN" image={Mapp} />
+        <DesignCard title="GRAPHIC DESIGN" image={Mgra} />
+      </div>
+      <div className="home__design--tablet">
+        <DesignCard title="WEB DESIGN" image={Tweb} />
+        <DesignCard title="APP DESIGN" image={Tapp} />
+        <DesignCard title="GRAPHIC DESIGN" image={Tgra} />
+      </div>
+      <div className="home__design--desktop">
+        <DesignCard title="WEB DESIGN" image={DwebL} />
+        <div className="home__design--desktopcontainer">
+          <DesignCard title="APP DESIGN" image={Dapp} />
+          <DesignCard title="GRAPHIC DESIGN" image={Dgra} />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

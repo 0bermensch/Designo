@@ -16,13 +16,19 @@ const Header = () => {
     hamburgerNav = (
       <ul className="header__hamburgernav">
         <li>
-          <NavLink>OUR COMPANY</NavLink>
+          <NavLink className="header__hamburgernav-item" to="/about">
+            OUR COMPANY
+          </NavLink>
         </li>
         <li>
-          <NavLink>LOCATIONS</NavLink>
+          <NavLink className="header__hamburgernav-item" to="/locations">
+            LOCATIONS
+          </NavLink>
         </li>
         <li>
-          <NavLink>CONTACT</NavLink>
+          <NavLink className="header__hamburgernav-item" to="/contact">
+            CONTACT
+          </NavLink>
         </li>
       </ul>
     );
@@ -30,28 +36,36 @@ const Header = () => {
 
   return (
     <div className="header">
-      <NavLink>
-        <img className="header__logo" src={logodark} />
-      </NavLink>
-      <div
-        onClick={() => toggle(!navIcon)}
-        onClick={() => setOpenNavMenu(!openNavMenu)}
-      >
-        <img />
+      <div className="header__content">
+        <NavLink className="header__homelogo" to="/">
+          <img className="header__logo" src={logodark} />
+        </NavLink>
+        <div
+          onClick={() => toggle(!navIcon)}
+          onClick={() => setOpenNavMenu(!openNavMenu)}
+        >
+          <img className="header__hamburger" src={hamburger} />
+        </div>
+
+        <ul className="header__nav">
+          <li>
+            <NavLink className="header__nav--item" to="/about">
+              OUR COMPANY
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="header__nav--item" to="/locations">
+              LOCATIONS
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="header__nav--item" to="/contact">
+              CONTACT
+            </NavLink>
+          </li>
+        </ul>
       </div>
       {hamburgerNav}
-
-      <ul className="header__nav">
-        <li>
-          <NavLink className="header__nav--item">OUR COMPANY</NavLink>
-        </li>
-        <li>
-          <NavLink className="header__nav--item">lOCATIONS</NavLink>
-        </li>
-        <li>
-          <NavLink className="header__nav--item">CONTACT</NavLink>
-        </li>
-      </ul>
     </div>
   );
 };

@@ -62,7 +62,7 @@ const Home = () => {
         </div>
       </div>
 
-      {homeContent.map(
+      {/* {homeContent.map(
         <div className="home__content">
           <img className="home__content--img" src={img} />
           <div className="home__content--container">
@@ -70,7 +70,7 @@ const Home = () => {
             <div className="home__content--context">{context}</div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

@@ -76,5 +76,17 @@
 
 @include desktop {
   .header {
+    height: 155px;
+    &__content {
+      top: 64px;
+      margin: 0 11.46%;
+    }
+    &__homelogo {
+      width: 13.6%;
+    }
+    &__nav {
+      width: 50%;
+      padding-left: 35%;
+    }
   }
 }

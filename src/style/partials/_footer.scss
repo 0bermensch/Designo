@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+}
+.footertop {
+  background-color: $peach;
+  padding: 0 6.4%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  &__container {
+    margin: 64px 6.4% 32px;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logolight from "../asset/shared/desktop/logo-light.png";
 import fblogo from "../asset/shared/desktop/icon-facebook.svg";
 import ytlogo from "../asset/shared/desktop/icon-youtube.svg";
@@ -19,7 +20,11 @@ const Footer = () => {
             how our expertise can help your business grow.
           </div>
         </div>
-        <div className="footertop__button">GET IN TOUCH</div>
+        <button className="footertop__button">
+          <NavLink to="/contact" className="footertop__button--text">
+            GET IN TOUCH
+          </NavLink>
+        </button>
       </div>
       <div className="footerbottom">
         <div className="footerbottom__topcontainer">
@@ -29,19 +34,21 @@ const Footer = () => {
             alt="logo"
           />
           <ul className="footerbottom__topcontainer--nav">
-            <li className="footerbottom__topcontainer--nav">OUR COMPANY</li>
-            <li className="footerbottom__topcontainer--nav">LOCATIONS</li>
-            <li className="footerbottom__topcontainer--nav">CONTACT</li>
+            <li className="footerbottom__topcontainer--navitem">OUR COMPANY</li>
+            <li className="footerbottom__topcontainer--navitem">LOCATIONS</li>
+            <li className="footerbottom__topcontainer--navitem">CONTACT</li>
           </ul>
         </div>
         <div className="footerbottom__bottomcontainer">
           <div className="footerbottom__bottomcontainer--section1">
-            <div>Designo Central Office</div>
+            <div style={{ fontWeight: "bold" }}>Designo Central Office</div>
             <div>3886 Wellington Street</div>
             <div>Toronto, Ontario M9C 3J5</div>
           </div>
           <div className="footerbottom__bottomcontainer--section2">
-            <div>Contact Us (Central Office)</div>
+            <div style={{ fontWeight: "bold" }}>
+              Contact Us (Central Office)
+            </div>
             <div>P: +1 253-863-8967</div>
             <div>M: contact@designo.co</div>
           </div>

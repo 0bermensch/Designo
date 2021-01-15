@@ -24,6 +24,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header__homelogo {
@@ -130,27 +133,283 @@
 
 .footer {
   width: 100%;
+  height: 1005;
+  font-family: "jost";
 }
 
 .footertop {
   background-color: #e7816b;
-  padding: 0 6.4%;
+  background-image: url("../asset/shared/desktop/bg-pattern-three-circles.svg");
+  position: relative;
+  top: 190px;
+  z-index: 2;
+  margin: 0 6.4%;
+  height: 379px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  font-family: "jost";
 }
 
 .footertop__container {
   margin: 64px 6.4% 32px;
+  color: #ffffff;
+  width: auto;
+}
+
+.footertop__container--title {
+  font-size: 32px;
+  line-height: 36px;
+  margin: 0 5% 6px;
+}
+
+.footertop__container--context {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.footertop__button {
+  font-size: 15px;
+  line-height: 21.5px;
+  letter-spacing: 1px;
+  background-color: #ffffff;
+  height: 56px;
+  border: none;
+  width: 46.5%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 10px;
+}
+
+.footertop__button--text {
+  text-decoration: none;
+}
+
+.footertop__button:hover {
+  background-color: #ffad9b;
+  color: #ffffff;
+}
+
+.footerbottom {
+  padding: 254px 6.4% 64px;
+  text-align: center;
+  background-color: #1d1c1e;
+}
+
+.footerbottom__topcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footerbottom__topcontainer--logo {
+  width: 62%;
+  margin-bottom: 33px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footerbottom__topcontainer--nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  list-style-type: none;
+  margin: 0;
+  padding: 32px 0 0;
+  border-top: solid grey 1px;
+}
+
+.footerbottom__topcontainer--navitem {
+  margin-bottom: 32px;
+}
+
+.footerbottom__bottomcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f1f3f5;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.footerbottom__bottomcontainer--section1 {
+  margin: 8px 0 0;
+  width: auto;
+}
+
+.footerbottom__bottomcontainer--section2 {
+  margin: 40px 0;
+  width: auto;
+}
+
+.footerbottom__bottomcontainer--social {
+  height: 24px;
+  width: 70%;
+  padding-left: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footertop {
+    top: 80px;
+    height: 350px;
+    margin: 0 5%;
+  }
+  .footertop__container {
+    margin-top: 57px;
+    width: auto;
+  }
+  .footertop__container--title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0 25% 12px;
+  }
+  .footertop__container--context {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 0 10%;
+  }
+  .footertop__button {
+    width: 23%;
+  }
+  .footerbottom {
+    padding: 130px 5.1% 80px;
+  }
+  .footerbottom__topcontainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footerbottom__topcontainer--logo {
+    height: 27px;
+    width: 30.2%;
+    margin-bottom: 0;
+    -ms-flex-item-align: initial;
+        -ms-grid-row-align: initial;
+        align-self: initial;
+  }
+  .footerbottom__topcontainer--nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 70%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 17%;
+    padding-top: 5px;
+    border: none;
+  }
+  .footerbottom__bottomcontainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 39px;
+    padding-top: 39px;
+    border-top: solid grey 1px;
+  }
+  .footerbottom__bottomcontainer--section1, .footerbottom__bottomcontainer--section2 {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0;
+  }
+  .footerbottom__bottomcontainer--social {
+    width: 25%;
+    padding-top: 48px;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footertop {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 292px;
+    margin: 0 11.4%;
+  }
+  .footertop__container {
+    text-align: start;
+    width: 36.5%;
+  }
+  .footertop__container--title {
+    margin: 0 0 20px;
+    width: 80%;
+  }
+  .footertop__container--context {
+    margin: 0;
+    padding: 0;
+  }
+  .footertop__button {
+    width: 13.7%;
+    margin-right: 8.65%;
+  }
+  .footerbottom {
+    padding: 130px 11.4% 72px;
+  }
+  .footerbottom__topcontainer--logo {
+    width: 18.2%;
+  }
+  .footerbottom__topcontainer--nav {
+    padding-left: 48.5%;
+  }
+  .footerbottom__bottomcontainer--social {
+    width: 20%;
+  }
 }
 
 .homecard {
   width: 80vw;
+}
+
+.homecard__hero {
+  width: 30vw;
 }
 
 body {

@@ -1,13 +1,208 @@
 .footer {
   width: 100%;
+  height: 1005;
+  font-family: "jost";
 }
 .footertop {
   background-color: $peach;
-  padding: 0 6.4%;
+  background-image: url("../asset/shared/desktop/bg-pattern-three-circles.svg");
+  position: relative;
+  top: 190px;
+  z-index: 2;
+  margin: 0 6.4%;
+  height: 379px;
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  border-radius: 20px;
+  font-family: "jost";
   &__container {
     margin: 64px 6.4% 32px;
+    color: $white;
+    width: auto;
+  }
+  &__container--title {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0 5% 6px;
+  }
+  &__container--context {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  &__button {
+    font-size: 15px;
+    line-height: 21.5px;
+    letter-spacing: 1px;
+    background-color: $white;
+    height: 56px;
+    border: none;
+    width: 46.5%;
+    align-self: center;
+    border-radius: 10px;
+  }
+  &__button--text {
+    text-decoration: none;
+  }
+  &__button:hover {
+    background-color: $lightpeach;
+    color: $white;
+  }
+}
+.footerbottom {
+  padding: 254px 6.4% 64px;
+  text-align: center;
+  background-color: $black;
+  &__topcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  &__topcontainer--logo {
+    width: 62%;
+    margin-bottom: 33px;
+    align-self: center;
+  }
+  &__topcontainer--nav {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    list-style-type: none;
+    margin: 0;
+    padding: 32px 0 0;
+    border-top: solid grey 1px;
+  }
+  &__topcontainer--navitem {
+    margin-bottom: 32px;
+  }
+  &__bottomcontainer {
+    display: flex;
+    flex-direction: column;
+    color: $lightgrey;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+  }
+  &__bottomcontainer--section1 {
+    margin: 8px 0 0;
+    width: auto;
+  }
+  &__bottomcontainer--section2 {
+    margin: 40px 0;
+    width: auto;
+  }
+  &__bottomcontainer--social {
+    height: 24px;
+    width: 70%;
+    padding-left: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+}
+
+@include tablet {
+  .footertop {
+    top: 80px;
+    height: 350px;
+    margin: 0 5%;
+    &__container {
+      margin-top: 57px;
+      width: auto;
+    }
+    &__container--title {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 40px;
+      margin: 0 25% 12px;
+    }
+    &__container--context {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      padding: 0 10%;
+    }
+    &__button {
+      width: 23%;
+    }
+  }
+  .footerbottom {
+    padding: 130px 5.1% 80px;
+
+    &__topcontainer {
+      flex-direction: row;
+    }
+    &__topcontainer--logo {
+      height: 27px;
+      width: 30.2%;
+      margin-bottom: 0;
+      align-self: initial;
+    }
+    &__topcontainer--nav {
+      flex-direction: row;
+      width: 70%;
+      justify-content: space-between;
+      padding-left: 17%;
+      padding-top: 5px;
+      border: none;
+    }
+    &__bottomcontainer {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 39px;
+      padding-top: 39px;
+      border-top: solid grey 1px;
+    }
+    &__bottomcontainer--section1,
+    &__bottomcontainer--section2 {
+      align-content: center;
+      margin: 0;
+    }
+    &__bottomcontainer--social {
+      width: 25%;
+      padding-top: 48px;
+      padding-left: 0;
+    }
+  }
+}
+
+@include desktop {
+  .footertop {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 292px;
+    margin: 0 11.4%;
+    &__container {
+      text-align: start;
+      width: 36.5%;
+    }
+    &__container--title {
+      margin: 0 0 20px;
+      width: 80%;
+    }
+    &__container--context {
+      margin: 0;
+      padding: 0;
+    }
+    &__button {
+      width: 13.7%;
+      margin-right: 8.65%;
+    }
+  }
+  .footerbottom {
+    padding: 130px 11.4% 72px;
+    &__topcontainer--logo {
+      width: 18.2%;
+    }
+    &__topcontainer--nav {
+      padding-left: 48.5%;
+    }
+    &__bottomcontainer--social {
+      width: 20%;
+    }
   }
 }
